@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Landing page para test frontend">
+	<meta name="keywords" content="Wunderman, Thompson, Frontend, Uruguay">
+	<meta name="language" content="es">
+	<meta name="distribution" content="global">
+    <!-- CSS Slick -->
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
+    <!-- CSS Customize -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Landing Page</title>
+</head>
+
+<body onload="cargarSelectDeptos()">
+
+    <!-- HEADER -->
+    <header class="myHeader">
+        <p>Landing page</p>
+        <div class="myRedes">
+            <span>Seguí conectado</span>
+            <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="facebook" /></a>
+        </div>
+    </header> 
+    
+    <!-- SLIDER -->
+    <section>
+        <div class="containerSlide">
+            <div class="slideShow">
+                <div class="slide slide1"></div>
+                <div class="slide slide2"></div>
+                <div class="slide slide3"></div> 
+            </div>
+        </div>    
+        <div class="product">
+            <h2>Product</h2>
+            <h1>Two</h1>
+            <button class="btn1" type="button">Comprar</button>  
+            <div class="price">
+                <img src="img/mancha-gris.png" alt="mancha">
+                <div>  
+                    <h2>U$S</h2>
+                    <strong>99</strong>
+                </div>
+                <div class="detail">
+                    <span>.50</span>
+                    <p>/ mes</p>
+                </div>
+            </div>   
+        </div>
+    </section>
+      
+    <!-- SECTION/ARTÍCULOS -->
+    <main>
+        <h1 class="title1">Úlitmos Artículos</h1>
+        <div class="container">
+            <!-- CARDS 1 -->
+            <div class="card1">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard1">
+                    <strong>Lorem Ipsum</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae veniam sequi sunt quo officiis, quae magnam illo aliquam laborum fugiat!</p>
+                </div>
+            </div>
+
+            <!-- CARDS 2 -->
+            <div class="card2">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard2">
+                    <strong>Lorem Ipsum sit amet, consetetur.</strong>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, expedita?</p>
+                </div>
+            </div>
+
+            <!-- CARDS 3 -->
+            <div class="card1">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard2">
+                    <strong>Lorem Ipsum sit amet, consetetur.</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae veniam sequi sunt quo officiis, quae magnam illo aliquam laborum fugiat!</p>
+                </div>
+            </div>
+
+            <!-- CARDS 4 -->
+            <div class="card2">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard1">
+                    <strong>Lorem Ipsum</strong>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, expedita?</p>
+                </div>
+            </div>
+            
+            <!-- CARDS 5 -->
+            <div class="card1">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard1">
+                    <strong>Lorem Ipsum</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae veniam sequi sunt quo officiis, quae magnam illo aliquam laborum fugiat!</p>
+                </div>
+            </div>
+
+            <!-- CARDS 6 -->
+            <div class="card2">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard1">
+                    <strong>Lorem Ipsum</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae veniam sequi sunt quo officiis, quae magnam illo aliquam laborum fugiat!</p>
+                </div>
+            </div>
+
+            <!-- CARDS 7 -->
+            <div class="card1">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard1">
+                    <strong>Lorem Ipsum</strong>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, expedita?</p>
+                </div>
+            </div>
+
+            <!-- CARDS 8 -->
+            <div class="card2">
+                <div class="gris"></div> <!-- CAMBIAR A <img> -->
+                <div class="textCard1">
+                    <strong>Lorem Ipsum</strong>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, expedita?</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FORMULARIO -->
+    <footer>
+        <h1 class="title2">Formulario</h1>
+        <form class="myForm">
+            <!-- CAMPO NOMBRE/APELLIDO -->
+            <input id="fname" class="campoNombre" type="text" name="name" placeholder="NOMBRE">
+            <input id="lname" class="campoApellido"  type="text" name="surname" placeholder="APELLIDO">
+
+            <!-- CAMPO MAIL -->
+            <input id="email" class="campoMail" type="email" name="email" placeholder="E-MAIL">
+        
+            <!-- CAMPO UBICACIÓN -->
+            <select id="departamentos" onchange="cargarLocalidades()" class="select1">
+                <option selected disabled>Departamento</option>
+                <option value="Artigas">Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Salto">Salto</option>
+            </select>
+            <select id="localidades" class="select2">
+                <option selected disabled>Localidad</option>
+                <option value="Artigas">Artigas</option>
+                <option value="Bella Unión">Bella Unión</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Santa Lucia">Santa Lucia</option>
+                <option value="Montevideo">Montevideo</option>                
+                <option value="Salto">Salto</option>
+                <option value="Daymán">Daymán</option>
+                <option value="Arapey">Arapey</option>
+            </select>
+        
+            <!-- CAMPOS DOCUMENTO/CONFIRMACIÓN -->
+            <input id="ci" class="campoCi" type="numbre" name="document" placeholder="C.I">
+            <div class="campoCheck">
+                <input id="#" type="checkbox" name="success">
+                <label for="#">Acepto las bases y condiciones</label>
+            </div>
+            <!-- SUBMIT -->
+            <button class="btn2" type="button" onclick="verificarCampos()">Enviar</button>   
+        </form>
+    </footer>
+
+        <!-- Js Slick -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>   
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>  
+        <!-- Vanilla -->
+    <script src="js/datos.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/logica.js"></script>
+    <script src="js/slider.js"></script> 
+</body>
+</html>

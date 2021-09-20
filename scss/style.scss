@@ -1,0 +1,338 @@
+@import "variables";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px; 
+    width: 100%;   
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    // HEADER
+.myHeader {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $tonoNegro;
+    height: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    p {
+        color: $tonoBlanco;
+        font-weight: $light;
+        padding-left: 1rem;
+    }
+}    
+
+.myRedes {
+    display: flex;
+    span {  
+        color: $colorSecundario;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: $semiBold;
+        padding: 0.2rem 0.2rem 0rem 0rem;
+    }
+    a {
+        img {
+            padding: 0.2rem 0.5rem 0rem 0rem;
+        }  
+    }    
+}
+
+    //SLIDER
+.containerSlide {
+    position: absolute;
+    width: 100%;
+    margin-top: 2rem;
+}   
+
+.slide {
+    max-width: 1200px;
+    width: 100%;
+    height: 300px;
+    
+} 
+
+.slide1 {
+    background-color: $colorPrimario;
+}
+
+.slide2 {
+    background-color: #FFFB1E;
+}
+
+.slide3 {
+    background-color: #30bf54;
+}
+
+.product {
+    display: inline-block;
+    margin-left: 19rem;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 5;
+    h2 {
+        color: $colorSecundario;
+        font-weight: $light;
+        margin-bottom: -30px;
+    }
+    h1 {
+        color: $colorSecundario;
+        font-weight: bold;
+        font-size: 100px;
+        text-transform: uppercase;     
+    }
+    button {
+        @include btn1;
+    }
+    .price {
+        display: flex;
+        margin-top: -8.1rem;
+        padding-left: 16rem;
+        color: $colorSecundario;
+        img {
+            width: 22rem;
+            z-index: -1;
+            position: absolute;
+            top: -4rem;
+            left: 10rem;
+        }
+        h2 {
+            color: $tonoBlanco;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        strong {
+            color: $tonoBlanco;
+            font-size: 100px; 
+        }
+        .detail {
+            margin-top: 2rem;
+            p {
+                margin-top: 1.5rem;
+                color: $colorSecundario;
+            }
+        }
+    }    
+} 
+
+    // SECTION/CARDS
+.container { 
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    max-width: 1200px;
+} 
+
+.title1 {
+    padding-left: 1rem;
+    font-weight: $light;
+    font-size: 25px;   
+    margin-top:  10rem;
+}   
+
+.card1 {
+    width: 250px;
+    height: 350px;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 2rem;
+    border-radius: 0px 0px 7px 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+.card2 {
+    width: 250px;
+    height: 350px;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 3.5rem;
+    border-radius: 0px 0px 7px 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+.gris {
+    background: $colorPrimario;
+    background-size: cover;
+    border-radius: 7px 7px 0px 0px;
+    height: 125px;
+}
+
+.textCard1 {
+    display: inline-block;
+    justify-content: center;
+    height: 220px;
+    padding: 1.5rem 1rem;
+    strong{
+        font-size: 17px;
+    }    
+    p {
+        margin-top: 1rem; 
+        font-size: 13px;
+    }
+}
+
+.textCard2 {
+    display: inline-block;
+    justify-content: center;
+    height: 220px;
+    padding: 1.5rem 1rem;
+    strong{
+        font-size: 17px;
+    }
+    p {
+        font-size: 13px;
+    } 
+}
+
+    // FORMULARIO
+.title2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    font-weight: $light;
+    font-size: 25px; 
+        }  
+
+.myForm {
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20rem 20rem;
+    grid-template-areas:
+        "nombre apellido"
+        "mail mail"
+        "departamento localidad"
+        "ci checkbox"; 
+    button {
+        @include btn2;
+    }
+}
+
+
+
+input{
+    margin: 1rem 1rem 0rem 0rem;
+    height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.campoNombre {
+    grid-area: nombre;   
+}
+
+.campoApellido {
+    grid-area: apellido;
+}
+
+.campoMail {
+    grid-area: mail;
+}
+
+.select1 {
+    grid-area: departamento;
+    margin: 1rem 1rem 0rem 0rem;
+    height: 2rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: $colorSecundario;
+    border-radius: 3px; 
+}
+
+.select2 {
+    grid-area: localidad;
+    margin: 1rem 1rem 0rem 0rem;
+    height: 2rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: $colorSecundario; 
+    border-radius: 3px;
+}
+
+.campoCi {
+    grid-area: ci;
+}
+
+.campoCheck {
+    grid-area: checkbox;
+    width: 100%;
+    label {
+        font-weight: $light;
+        text-align: center;    
+    }
+}
+
+// QUERY
+@media (max-width: 375px) {
+    .myHeader{
+        top: 0;
+    }
+
+    .title1 {
+        margin-top: 6rem;
+    }
+
+    // SLIDER RESPONSIVE
+    .slide {
+        max-width: 375px;
+        height: 200px;
+    }
+    .product {
+        margin-left: 1rem;
+        h1 {
+            font-size: 80px;
+        }
+        .price{
+            padding-left: 12rem;
+            img {
+                width: 15rem;
+                z-index: -1;
+                position: absolute;
+                top: -3rem;
+                left: 8rem;
+            }
+        }    
+    }  
+    
+    // FORMULARIO RESPONSIVE
+    .myForm {
+        padding: 1rem;
+        border-top: 1px solid #ccc;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 90%;
+        grid-template-areas:
+            "nombre" 
+            "apellido"
+            "mail"
+            "departamento" 
+            "localidad"
+            "ci" 
+            "checkbox"; 
+        button {
+            @include btn3;
+        }
+        .campoNombre {
+            grid-area: nombre;   
+        }
+
+        .campoApellido {
+            grid-area: apellido;
+        }
+    }
+}  
+     
